@@ -1,17 +1,17 @@
 // Parte 1
-function suma(a, b) {
+function Suma(a, b) {
   return a + b;
 }
 
-function resta(a, b) {
+function Resta(a, b) {
   return a - b;
 }
 
-function multiplicacion(a, b) {
+function Multiplicacion(a, b) {
   return a * b;
 }
 
-function division(a, b) {
+function Division(a, b) {
   if (b === 0) {
     return 'Error: División por cero';
   }
@@ -19,24 +19,24 @@ function division(a, b) {
 }
 
 // Parte 2
-function calculadora(operacion) {
-  const num1 = parseFloat(document.getElementById("num1").value);
-  const num2 = parseFloat(document.getElementById("num2").value);
+funcion calculadora(operacion) {
+  const num1 = document.getElementByid("num1").value;
+  const num2 = document.getElementByid("num2").value;
   let result;
 
   if (isNaN(num1) || isNaN(num2)) {
     result = "Por favor, ingresa números válidos.";
   } else {
-     if (operacion === 'Suma') {
+     if (operacion === 'suma') {
       result = suma(num1, num2);
     } else {
-      if (operacion === 'Resta') {
+      if (operacion === 'resta') {
         result = resta(num1, num2);
       } else {
-        if (operacion === 'Multiplicación') {
+        if (operacion === 'multiplicación') {
           result = multiplicacion(num1, num2);
         } else {
-          if (operacion === 'División') {
+          if (operacion === 'división') {
             result = division(num1, num2);
           } else {
             result = "Operación no válida.";
@@ -46,6 +46,6 @@ function calculadora(operacion) {
     }
   }
 
-  document.getElementById("result").innerHTML = `<strong>RESULTADO</strong>
-   <br> ${operacion}: ${result}`;
+  document.getElementById("result").innerHTML = '<strong>RESULTADO</strong>
+   <br> $(operacion): ${result}';
 }
